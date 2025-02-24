@@ -11,7 +11,7 @@ const Ranker = () => {
     <div>
     {items.map((item, index) => (
                         <div key={index}>
-                            <h3>{item.title}: {item.status}</h3>
+                            <h3>{item.title}: {item.status} <input /></h3>
                         </div>
                     ))}
                 </div>
