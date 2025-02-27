@@ -20,6 +20,9 @@
 input {
   width: 30px
 }
+.movie {
+  color: green
+}
 
 @keyframes logo-spin {
   from {

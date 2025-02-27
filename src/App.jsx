@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-    <Ranker data={data}/>
+    <Ranker data={data} isWinner={"Winner"}/>
     </>
   )
 }
