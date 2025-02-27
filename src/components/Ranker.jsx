@@ -1,5 +1,5 @@
 import data from "../data/movies.json";
-
+import Button from "./Button";
 const Ranker = () => {
   
   return (
@@ -11,7 +11,7 @@ const Ranker = () => {
           </div>
         ))}
       </ul>
-      <button>Submit</button>
+      <Button />
     </div>
   );
   
