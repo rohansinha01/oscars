@@ -1,15 +1,20 @@
 import data from "../data/movies.json";
 
 const Ranker = () => {
+  
   return (
-    <ul>
-      {data.map(({ index, title, status }) => (
-        <div key={index}>
-          {title}: {status}
-        </div>
-      ))}
-    </ul>
+    <div>
+      <ul>
+        {data.map(({ index, title, status }) => (
+          <div key={index}>
+            {title}: {status} <input />
+          </div>
+        ))}
+      </ul>
+      <button>Submit</button>
+    </div>
   );
+  
 };
 
 export default Ranker;
