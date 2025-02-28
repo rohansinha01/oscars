@@ -1,6 +1,7 @@
 import data from "../data/movies.json";
 import Button from "./Button";
-const Ranker = () => {
+
+const Ranker = (rank) => {
   
   return (
     <div>
@@ -11,7 +12,7 @@ const Ranker = () => {
           </div>
         ))}
       </ul>
-      <Button />
+      <Button rank={rank}/>
     </div>
   );
   
