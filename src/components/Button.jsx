@@ -1,11 +1,20 @@
+import { useState } from 'react'
 
 const Button = () => {
+const [rank, setRank] = useState(0)
+
+function handleClick() {
+    setRank(alert('hello'))
+}
+
   return (
+    <>
     <div>
-        <button>
+        <button onClick={handleClick}>
             Submit
         </button>
     </div>
+    </>
   )
 }
 
