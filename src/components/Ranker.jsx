@@ -1,5 +1,5 @@
-import data from "../data/movies.json";
-import { useState } from "react";
+import { useState } from 'react';
+
 
 const movies = [
   {
@@ -45,38 +45,58 @@ const movies = [
 ]
 
 const Ranker = () => {
-  const [selectedOption, setSelectedOption] = useState('')
+  const [firstOption, setFirstOption] = useState('');
+  const [secondOption, setSecondOption] = useState('');
+
+  const filteredMovies = movies.filter(movie => movie.title !== firstOption);
+
   return (
+    <>
+      <form>
+        <fieldset>
+          <legend>
+            What is your #1 Option?
+          </legend>
 
-    <form>
-      <fieldset>
-        <legend>
-          What is your #1 Option?
-        </legend>
-
-        <select
-          value={selectedOption}
-          onChange={event => {
-            setSelectedOption(event.target.value)
-          }}>
-          
-          {movies.map((movie) => (
-            <option key={movie.index} value={movie.title}>
-              {movie.title}
-            </option>
-          ))}
-
-        </select>
-      
-       
-  
-      </fieldset>
+          <select
+            value={firstOption}
+            onChange={event => {
+              setFirstOption(event.target.value);
+            }}
+          >
+            <option value="" disabled>Select an option</option>
+            {movies.map((movie) => (
+              <option key={movie.index} value={movie.title}>
+                {movie.title}
+              </option>
+            ))}
+          </select>
+        </fieldset>
       </form>
-  
-    
+      
+      <form>
+        <fieldset>
+          <legend>
+            What is your #2 Option?
+          </legend>
 
+          <select
+            value={secondOption}
+            onChange={event => {
+              setSecondOption(event.target.value);
+            }}
+          >
+            <option value="" disabled>Select an option</option>
+            {filteredMovies.map((movie) => (
+              <option key={movie.index} value={movie.title}>
+                {movie.title}
+              </option>
+            ))}
+          </select>
+        </fieldset>
+      </form>
+    </>
   );
-  
 };
 
 export default Ranker;
