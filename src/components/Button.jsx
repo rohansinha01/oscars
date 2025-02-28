@@ -4,7 +4,7 @@ const Button = () => {
 const [rank, setRank] = useState(0)
 
 function handleClick() {
-    setRank(rank)
+    setRank()
 }
 
   return (
