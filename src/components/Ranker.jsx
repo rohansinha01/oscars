@@ -7,10 +7,12 @@ const Ranker = () => {
   const [secondOption, setSecondOption] = useState('');
   const [thirdOption, setThirdOption] = useState('');
   const [fourthOption, setFourthOption] = useState('');
+  const [fifthOption, setFifthOption] = useState('')
 
   const filteredMovies = movies.filter(movie => movie.title !== firstOption);
   const secondFilteredMovies = movies.filter(movie => movie.title !== firstOption && movie.title !== secondOption);
   const thirdFilteredMovies = movies.filter(movie => movie.title !== firstOption && movie.title !== secondOption && movie.title !== thirdOption)
+  const fourthFilteredMovies = movies.filter(movie => movie.title !== firstOption && movie.title !== secondOption && movie.title !== thirdOption && movie.title !== fourthOption)
  
 
   return (
@@ -94,6 +96,27 @@ const Ranker = () => {
           >
             <option value="" disabled>Select an option</option>
             {thirdFilteredMovies.map((movie) => (
+              <option key={movie.index} value={movie.title}>
+                {movie.title}
+              </option>
+            ))}
+          </select>
+        </fieldset>
+      </form>
+      <form>
+        <fieldset>
+          <legend>
+            What is your #5 Option?
+          </legend>
+
+          <select
+            value={fifthOption}
+            onChange={event => {
+              setFifthOption(event.target.value);
+            }}
+          >
+            <option value="" disabled>Select an option</option>
+            {fourthFilteredMovies.map((movie) => (
               <option key={movie.index} value={movie.title}>
                 {movie.title}
               </option>
