@@ -83,7 +83,6 @@ const Ranker = () => {
       movie.title !== ninthOption
   );
 
-
   return (
     <>
       <form>
@@ -108,214 +107,213 @@ const Ranker = () => {
         </fieldset>
       </form>
       {filteredMovies.length === 0 ? null : (
-      <form>
-        <fieldset>
-          <legend>What is your #2 Option?</legend>
+        <form>
+          <fieldset>
+            <legend>What is your #2 Option?</legend>
 
-          <select
-            value={secondOption}
-            onChange={(event) => {
-              setSecondOption(event.target.value);
-            }}
-          >
-            <option value="" disabled>
-              Select an option
-            </option>
-            {filteredMovies.map((movie) => (
-              <option key={movie.index} value={movie.title}>
-                {movie.title}
+            <select
+              value={secondOption}
+              onChange={(event) => {
+                setSecondOption(event.target.value);
+              }}
+            >
+              <option value="" disabled>
+                Select an option
               </option>
-            ))}
-          </select>
-        </fieldset>
-      </form>
+              {filteredMovies.map((movie) => (
+                <option key={movie.index} value={movie.title}>
+                  {movie.title}
+                </option>
+              ))}
+            </select>
+          </fieldset>
+        </form>
       )}
       {secondFilteredMovies.length === 0 ? null : (
-      <form>
-        <fieldset>
-          <legend>What is your #3 Option?</legend>
+        <form>
+          <fieldset>
+            <legend>What is your #3 Option?</legend>
 
-          <select
-            value={thirdOption}
-            onChange={(event) => {
-              setThirdOption(event.target.value);
-            }}
-          >
-            <option value="" disabled>
-              Select an option
-            </option>
-            {secondFilteredMovies.map((movie) => (
-              <option key={movie.index} value={movie.title}>
-                {movie.title}
+            <select
+              value={thirdOption}
+              onChange={(event) => {
+                setThirdOption(event.target.value);
+              }}
+            >
+              <option value="" disabled>
+                Select an option
               </option>
-            ))}
-          </select>
-        </fieldset>
-      </form>
+              {secondFilteredMovies.map((movie) => (
+                <option key={movie.index} value={movie.title}>
+                  {movie.title}
+                </option>
+              ))}
+            </select>
+          </fieldset>
+        </form>
       )}
       {thirdFilteredMovies.length === 0 ? null : (
-      <form>
-        <fieldset>
-          <legend>What is your #4 Option?</legend>
+        <form>
+          <fieldset>
+            <legend>What is your #4 Option?</legend>
 
-          <select
-            value={fourthOption}
-            onChange={(event) => {
-              setFourthOption(event.target.value);
-            }}
-          >
-            <option value="" disabled>
-              Select an option
-            </option>
-            {thirdFilteredMovies.map((movie) => (
-              <option key={movie.index} value={movie.title}>
-                {movie.title}
+            <select
+              value={fourthOption}
+              onChange={(event) => {
+                setFourthOption(event.target.value);
+              }}
+            >
+              <option value="" disabled>
+                Select an option
               </option>
-            ))}
-          </select>
-        </fieldset>
-      </form>
+              {thirdFilteredMovies.map((movie) => (
+                <option key={movie.index} value={movie.title}>
+                  {movie.title}
+                </option>
+              ))}
+            </select>
+          </fieldset>
+        </form>
       )}
       {fourthFilteredMovies.length === 0 ? null : (
-      <form>
-        <fieldset>
-          <legend>What is your #5 Option?</legend>
+        <form>
+          <fieldset>
+            <legend>What is your #5 Option?</legend>
 
-          <select
-            value={fifthOption}
-            onChange={(event) => {
-              setFifthOption(event.target.value);
-            }}
-          >
-            <option value="" disabled>
-              Select an option
-            </option>
-            {fourthFilteredMovies.map((movie) => (
-              <option key={movie.index} value={movie.title}>
-                {movie.title}
+            <select
+              value={fifthOption}
+              onChange={(event) => {
+                setFifthOption(event.target.value);
+              }}
+            >
+              <option value="" disabled>
+                Select an option
               </option>
-            ))}
-          </select>
-        </fieldset>
-      </form>
+              {fourthFilteredMovies.map((movie) => (
+                <option key={movie.index} value={movie.title}>
+                  {movie.title}
+                </option>
+              ))}
+            </select>
+          </fieldset>
+        </form>
       )}
       {fifthFilteredMovies.length === 0 ? null : (
-      <form>
-        <fieldset>
-          <legend>What is your #6 Option?</legend>
+        <form>
+          <fieldset>
+            <legend>What is your #6 Option?</legend>
 
-          <select
-            value={sixthOption}
-            onChange={(event) => {
-              setSixthOption(event.target.value);
-            }}
-          >
-            <option value="" disabled>
-              Select an option
-            </option>
-            {fifthFilteredMovies.map((movie) => (
-              <option key={movie.index} value={movie.title}>
-                {movie.title}
+            <select
+              value={sixthOption}
+              onChange={(event) => {
+                setSixthOption(event.target.value);
+              }}
+            >
+              <option value="" disabled>
+                Select an option
               </option>
-            ))}
-          </select>
-        </fieldset>
-      </form>
+              {fifthFilteredMovies.map((movie) => (
+                <option key={movie.index} value={movie.title}>
+                  {movie.title}
+                </option>
+              ))}
+            </select>
+          </fieldset>
+        </form>
       )}
       {sixthFilteredMovies.length === 0 ? null : (
-      <form>
-        <fieldset>
-          <legend>What is your #7 Option?</legend>
+        <form>
+          <fieldset>
+            <legend>What is your #7 Option?</legend>
 
-          <select
-            value={seventhOption}
-            onChange={(event) => {
-              setSeventhOption(event.target.value);
-            }}
-          >
-            <option value="" disabled>
-              Select an option
-            </option>
-            {sixthFilteredMovies.map((movie) => (
-              <option key={movie.index} value={movie.title}>
-                {movie.title}
+            <select
+              value={seventhOption}
+              onChange={(event) => {
+                setSeventhOption(event.target.value);
+              }}
+            >
+              <option value="" disabled>
+                Select an option
               </option>
-            ))}
-          </select>
-        </fieldset>
-      </form>
+              {sixthFilteredMovies.map((movie) => (
+                <option key={movie.index} value={movie.title}>
+                  {movie.title}
+                </option>
+              ))}
+            </select>
+          </fieldset>
+        </form>
       )}
       {seventhFilteredMovies.length === 0 ? null : (
-      <form>
-        <fieldset>
-          <legend>What is your #8 Option?</legend>
+        <form>
+          <fieldset>
+            <legend>What is your #8 Option?</legend>
 
-          <select
-            value={eighthOption}
-            onChange={(event) => {
-              setEighthOption(event.target.value);
-            }}
-          >
-            <option value="" disabled>
-              Select an option
-            </option>
-            {seventhFilteredMovies.map((movie) => (
-              <option key={movie.index} value={movie.title}>
-                {movie.title}
+            <select
+              value={eighthOption}
+              onChange={(event) => {
+                setEighthOption(event.target.value);
+              }}
+            >
+              <option value="" disabled>
+                Select an option
               </option>
-            ))}
-          </select>
-        </fieldset>
-      </form>
+              {seventhFilteredMovies.map((movie) => (
+                <option key={movie.index} value={movie.title}>
+                  {movie.title}
+                </option>
+              ))}
+            </select>
+          </fieldset>
+        </form>
       )}
       {eighthFilteredMovies.length === 0 ? null : (
-      <form>
-        <fieldset>
-          <legend>What is your #9 Option?</legend>
+        <form>
+          <fieldset>
+            <legend>What is your #9 Option?</legend>
 
-          <select
-            value={ninthOption}
-            onChange={(event) => {
-              setNinthOption(event.target.value);
-            }}
-          >
-            <option value="" disabled>
-              Select an option
-            </option>
-            {eighthFilteredMovies.map((movie) => (
-              <option key={movie.index} value={movie.title}>
-                {movie.title}
+            <select
+              value={ninthOption}
+              onChange={(event) => {
+                setNinthOption(event.target.value);
+              }}
+            >
+              <option value="" disabled>
+                Select an option
               </option>
-            ))}
-          </select>
-        </fieldset>
-      </form>
-      )}
-      
-        {ninthFilteredMovies.length === 0 ? null : (
-          <form>
-            <fieldset>
-              <legend>What is your #10 Option?</legend>
-
-              <select
-                value={tenthOption}
-                onChange={(event) => {
-                  setTenthOption(event.target.value);
-                }}
-              >
-                <option value="" disabled>
-                  Select an option
+              {eighthFilteredMovies.map((movie) => (
+                <option key={movie.index} value={movie.title}>
+                  {movie.title}
                 </option>
-                {ninthFilteredMovies.map((movie) => (
-                  <option key={movie.index} value={movie.title}>
-                    {movie.title}
-                  </option>
-                ))}
-              </select>
-            </fieldset>
-          </form>
-        )}  
+              ))}
+            </select>
+          </fieldset>
+        </form>
+      )}
 
+      {ninthFilteredMovies.length === 0 ? null :
+        (<form>
+          <fieldset>
+            <legend>What is your #10 Option?</legend>
+
+            <select
+              value={tenthOption}
+              onChange={(event) => {
+                setTenthOption(event.target.value);
+              }}
+            >
+              <option value="" disabled>
+                Select an option
+              </option>
+              {ninthFilteredMovies.map((movie) => (
+                <option key={movie.index} value={movie.title}>
+                  {movie.title}
+                </option>
+              ))}
+            </select>
+          </fieldset>
+        </form>)}
+      
     </>
   );
 };
