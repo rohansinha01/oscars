@@ -11,6 +11,7 @@ const Ranker = () => {
   const [seventhOption, setSeventhOption] = useState("");
   const [eighthOption, setEighthOption] = useState("");
   const [ninthOption, setNinthOption] = useState("");
+  const [tenthOption, setTenthOption] = useState("");
 
   const filteredMovies = movies.filter((movie) => movie.title !== firstOption);
   const secondFilteredMovies = movies.filter(
@@ -67,6 +68,19 @@ const Ranker = () => {
       movie.title !== sixthOption &&
       movie.title !== seventhOption &&
       movie.title !== eighthOption
+  );
+
+  const ninthFilteredMovies = movies.filter(
+    (movie) =>
+      movie.title !== firstOption &&
+      movie.title !== secondOption &&
+      movie.title !== thirdOption &&
+      movie.title !== fourthOption &&
+      movie.title !== fifthOption &&
+      movie.title !== sixthOption &&
+      movie.title !== seventhOption &&
+      movie.title !== eighthOption &&
+      movie.title !== ninthOption
   );
 
   return (
@@ -268,6 +282,28 @@ const Ranker = () => {
           </select>
         </fieldset>
       </form>
+
+      <form>
+        <fieldset>
+          <legend>What is your #10 Option?</legend>
+
+          <select
+            value={tenthOption}
+            onChange={(event) => {
+              setTenthOption(event.target.value);
+            }}
+          >
+            <option value="" disabled>
+              Select an option
+            </option>
+            {ninthFilteredMovies.map((movie) => (
+              <option key={movie.index} value={movie.title}>
+                {movie.title}
+              </option>
+            ))}
+          </select>
+        </fieldset>
+      </form>      
     </>
   );
 };
