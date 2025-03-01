@@ -1,48 +1,6 @@
 import { useState } from 'react';
+import movies from '../data/movies.json';
 
-
-const movies = [
-  {
-      "index": 1,
-      "title": "Nomadland",
-      "status": "Winner"
-  },
-  {
-      "index": 2,
-      "title": "The Father",
-      "status": "Nominee"
-  },
-  {
-      "index": 3,
-      "title": "Judas and the Black Messiah",
-      "status": "Nominee"
-  },
-  {
-      "index": 4,
-      "title": "Mank",
-      "status": "Nominee"
-  },
-  {
-      "index": 5,
-      "title": "Minari",
-      "status": "Nominee"
-  },
-  {
-      "index": 6,
-      "title": "Promising Young Woman",
-      "status": "Nominee"
-  },
-  {
-      "index": 7,
-      "title": "Sound of Metal",
-      "status": "Nominee"
-  },
-  {
-      "index": 8,
-      "title": "The Trial of the Chicago 7",
-      "status": "Nominee"
-  }
-]
 
 const Ranker = () => {
   const [firstOption, setFirstOption] = useState('');
