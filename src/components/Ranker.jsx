@@ -83,8 +83,8 @@ const Ranker = () => {
       movie.title !== ninthOption
   );
 
+
   return (
-   
     <>
       <form>
         <fieldset>
@@ -107,7 +107,7 @@ const Ranker = () => {
           </select>
         </fieldset>
       </form>
-
+      {filteredMovies.length === 0 ? null : (
       <form>
         <fieldset>
           <legend>What is your #2 Option?</legend>
@@ -129,7 +129,8 @@ const Ranker = () => {
           </select>
         </fieldset>
       </form>
-
+      )}
+      {secondFilteredMovies.length === 0 ? null : (
       <form>
         <fieldset>
           <legend>What is your #3 Option?</legend>
@@ -151,7 +152,8 @@ const Ranker = () => {
           </select>
         </fieldset>
       </form>
-
+      )}
+      {thirdFilteredMovies.length === 0 ? null : (
       <form>
         <fieldset>
           <legend>What is your #4 Option?</legend>
@@ -173,7 +175,8 @@ const Ranker = () => {
           </select>
         </fieldset>
       </form>
-
+      )}
+      {fourthFilteredMovies.length === 0 ? null : (
       <form>
         <fieldset>
           <legend>What is your #5 Option?</legend>
@@ -195,7 +198,8 @@ const Ranker = () => {
           </select>
         </fieldset>
       </form>
-
+      )}
+      {fifthFilteredMovies.length === 0 ? null : (
       <form>
         <fieldset>
           <legend>What is your #6 Option?</legend>
@@ -217,7 +221,8 @@ const Ranker = () => {
           </select>
         </fieldset>
       </form>
-
+      )}
+      {sixthFilteredMovies.length === 0 ? null : (
       <form>
         <fieldset>
           <legend>What is your #7 Option?</legend>
@@ -239,7 +244,8 @@ const Ranker = () => {
           </select>
         </fieldset>
       </form>
-
+      )}
+      {seventhFilteredMovies.length === 0 ? null : (
       <form>
         <fieldset>
           <legend>What is your #8 Option?</legend>
@@ -261,7 +267,8 @@ const Ranker = () => {
           </select>
         </fieldset>
       </form>
-
+      )}
+      {eighthFilteredMovies.length === 0 ? null : (
       <form>
         <fieldset>
           <legend>What is your #9 Option?</legend>
@@ -283,28 +290,31 @@ const Ranker = () => {
           </select>
         </fieldset>
       </form>
+      )}
+      
+        {ninthFilteredMovies.length === 0 ? null : (
+          <form>
+            <fieldset>
+              <legend>What is your #10 Option?</legend>
 
-      <form>
-        <fieldset>
-          <legend>What is your #10 Option?</legend>
-
-          <select
-            value={tenthOption}
-            onChange={(event) => {
-              setTenthOption(event.target.value);
-            }}
-          >
-            <option value="" disabled>
-              Select an option
-            </option>
-            {ninthFilteredMovies.map((movie) => (
-              <option key={movie.index} value={movie.title}>
-                {movie.title}
-              </option>
-            ))}
-          </select>
-        </fieldset>
-      </form>      
+              <select
+                value={tenthOption}
+                onChange={(event) => {
+                  setTenthOption(event.target.value);
+                }}
+              >
+                <option value="" disabled>
+                  Select an option
+                </option>
+                {ninthFilteredMovies.map((movie) => (
+                  <option key={movie.index} value={movie.title}>
+                    {movie.title}
+                  </option>
+                ))}
+              </select>
+            </fieldset>
+          </form>
+        )}  
 
     </>
   );
