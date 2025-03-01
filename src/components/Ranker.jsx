@@ -84,6 +84,7 @@ const Ranker = () => {
   );
 
   return (
+   
     <>
       <form>
         <fieldset>
@@ -304,6 +305,7 @@ const Ranker = () => {
           </select>
         </fieldset>
       </form>      
+
     </>
   );
 };
