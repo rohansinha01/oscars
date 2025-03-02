@@ -1,6 +1,8 @@
 import { useState } from "react";
 import movies from "../data/movies.json";
 
+
+
 const Ranker = () => {
   const [firstOption, setFirstOption] = useState("");
   const [secondOption, setSecondOption] = useState("");
@@ -12,6 +14,8 @@ const Ranker = () => {
   const [eighthOption, setEighthOption] = useState("");
   const [ninthOption, setNinthOption] = useState("");
   const [tenthOption, setTenthOption] = useState("");
+
+
 
   const filteredMovies = movies.filter((movie) => movie.title !== firstOption);
   const secondFilteredMovies = movies.filter(
@@ -82,6 +86,7 @@ const Ranker = () => {
       movie.title !== eighthOption &&
       movie.title !== ninthOption
   );
+
 
   return (
     <>
